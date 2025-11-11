@@ -8,9 +8,7 @@ $user = $env["DB_USER"];
 $pass = $env["DB_PASS"];
 
 class Connection {
-
     private static $pdo;
-
 
     public static function conectar(){
         global $host, $port, $db_name, $user, $pass;
@@ -19,9 +17,8 @@ class Connection {
 
         self::$pdo = new PDO($dsn, $user, $pass);
 
-        if (!isset(self::$pdo)){
-            return self::$pdo;
-        }
+        return self::$pdo;
+        
     }
 }
 
