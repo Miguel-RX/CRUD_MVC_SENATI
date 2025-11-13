@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +9,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     
     <link rel="stylesheet" href="estilos/CSS.css">
+
+</head>
 <body class="p-3 mb-2 bg-dark-subtle text-dark-emphasis">
+
     <br>
+
     <h1 class="display-4" >Listado de Usuarios</h1>
+
     <br>
 
     <table class="table table-striped">
@@ -27,7 +32,7 @@
                 <td><?= $user['id']; ?></td>
                 <td><?= $user['name']; ?></td>
                 <td><?= $user['lastname']; ?></td>
-                <td>Editar | Eliminar</td>
+                <td> <a href="app/views/editar.php?id=<?= $user['id']; ?>">Editar</a> | <a href="app/views/eliminar.php?id=<?= $user['id']; ?>">Eliminar</a> </td>
             </tr>
         <?php } ?>
 
