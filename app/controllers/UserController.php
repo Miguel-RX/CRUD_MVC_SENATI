@@ -28,16 +28,17 @@
 
 
         //creacion de update user
-        public function updateUser(){
+        public function updateUser($data){
 
-            $users = $this->model->updateUser();
+            $users = $this->model->updateUser($data);
 
             header('Location: ../../index.php');
 
         }
-        public function deleteUser(){
 
-            $users = $this->model->updateUser();
+        public function deleteUser($id){
+
+            $this->model->deleteUser($id);
 
             header('Location: ../../index.php');
 
